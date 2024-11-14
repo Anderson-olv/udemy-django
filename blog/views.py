@@ -1,5 +1,11 @@
 from django.http import HttpResponse
+from django.shortcuts import render
+
 
 def blog(request):
-    print('teste_blog')
-    return HttpResponse('home do app')
+    print('blog')
+    return render(request, 'blog/home.html')
+
+def exemplo(request):
+    print('exemplo')
+    return render(request, 'blog/exemplo.html')
